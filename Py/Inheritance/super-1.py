@@ -25,7 +25,7 @@ class B(A):
         super().do()
         super().bo()
         super().ao()
-        # print(super().b)
+        # print(super().b)  --> use self.b if present in same that value return else parent data
     pass
 
 b = B()
