@@ -4,8 +4,6 @@ class A(A):
     pass
 
 
-a = A()
-
 
 # ERROR!
 # Traceback (most recent call last):
@@ -14,3 +12,16 @@ a = A()
 
 
 # Python (No Language) supports cyclic inheritance
+# ----------------------------
+
+
+class C(B):
+    pass
+
+class B(C):
+    pass
+
+# ERROR!
+# Traceback (most recent call last):
+#   File "<string>", line 7, in <module>
+# NameError: name 'B' is not defined
