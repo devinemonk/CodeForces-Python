@@ -2,7 +2,7 @@ class Book:
     def __init__(self , pages):
         self.pages = pages
         
-    def __add__(self , other):
+    def __add__(self , other): #magic_methods
         return self.pages + other.pages
         
 A = Book(10)
