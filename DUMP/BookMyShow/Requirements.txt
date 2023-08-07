@@ -1,0 +1,5 @@
+User selects the city, the service should display movie list
+After movie select, service should display theatres running that movie
+User select the show at parcular theatre and book their tickets
+Service should seating arrangement of a particular show
+Service should put a hold on the seats for five minutes for 5 min before cancel Reg
