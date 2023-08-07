@@ -1,0 +1,62 @@
+
+Table City{
+  city_id id [pk]
+  city_name varchar
+  state varchar
+  zipcode integer
+}
+
+Table Theatre{
+  theatre_id id [pk]
+  name varchar
+  no_of_movie_halls integer
+  city_id id [ref: > City.city_id]
+}
+
+Table TheatreHalls{
+  hall_id id [pk]
+  no_of_seats integer
+  theatre_id id [ref: > Theatre.theatre_id]
+  name varchar
+}
+
+Table TheatreSeat{
+  seat_id id [pk]
+  seat_type varchar
+  seat_no varchar
+  hall_id id [ref: > TheatreHalls.hall_id]
+}
+
+Table Movie{
+  movie_id id
+  movie_name varchar
+  duration time
+  release_date timestamp
+}
+
+Table Show{
+  show_id id
+  hall_id id [ref: > TheatreHalls.hall_id]
+  movie_id id [ref: > Movie.movie_id]
+  date date
+  start_time timestamp
+  end_time timestamp
+}
+
+Table User{
+  user_id id
+  user_name varchar
+  email email
+  phoneno varchar
+}
+
+Table Booking{
+  booking_id id 
+  user_id id [ref: > User.user_id]
+  show_id id [ref: > Show.show_id]
+  no_of_seats integer
+  status varchar
+  date date
+}
+
+
