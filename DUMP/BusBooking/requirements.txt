@@ -1,0 +1,21 @@
+Requirements
+1. User can do registration
+2. User can search all bus information
+3. Operator can feed ticket booking Info
+4. User or customer service can perform booking
+5. Our system notify for any updates
+6. Mgmt can validate the analytics report
+7. Offer details can share to users
+
+Registration ----User profile store in DB
+Booking service ---- Order details
+Notification service --- Notify all updates
+Inventory Service ---- Store Info in Inventory
+Offer service ---- Send offer details
+
+Micro services Architecture
+MySQL --- Transactional
+NoSQL DB ---Inventory
+Kafka --- Real time streams
+Spark --- Streaming Real time data processing
+Redis --- Distributed cache 
